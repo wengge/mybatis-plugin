@@ -1,0 +1,3 @@
+com\wengge\mapper\EmpDao.class
+com\wengge\po\EmpPO.class
+com\wengge\intercepter\MyPlugin.class
