@@ -1,5 +1,8 @@
 package com.wengge.po;
 
+import com.wengge.strategy.Sensitive;
+import com.wengge.strategy.SensitiveStrategy;
+
 import java.math.BigDecimal;
 
 
@@ -28,10 +31,12 @@ public class EmpPO {
     /**
      * 身份证号
      */
+    @Sensitive(strategy = SensitiveStrategy.ID_CARD)
     private String idcard;
 
     private BigDecimal salary;
 
+    @Sensitive(strategy = SensitiveStrategy.PHONE)
     private String mobile;
 
     private String email;

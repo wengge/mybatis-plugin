@@ -13,14 +13,18 @@
         <plugin interceptor="com.wengge.intercepter.MyPlugin">
             <property name="dbType" value="mysql" />
         </plugin>
-        <plugin interceptor="com.github.pagehelper.PageHelper">
-            <!--指定方言-->
-            <property name="dialect" value="mysql"/>
+        <plugin interceptor="com.wengge.intercepter.SensitivePlugin">
         </plugin>
-        <plugin interceptor="tk.mybatis.mapper.mapperhelper.MapperInterceptor">
-            <!-- 通用 mapper 接口，多个通用接口用逗号隔开 -->
-            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+        <plugin interceptor="com.wengge.intercepter.StatementPlugin">
         </plugin>
+<!--        <plugin interceptor="com.github.pagehelper.PageHelper">-->
+<!--            &lt;!&ndash;指定方言&ndash;&gt;-->
+<!--            <property name="dialect" value="mysql"/>-->
+<!--        </plugin>-->
+<!--        <plugin interceptor="tk.mybatis.mapper.mapperhelper.MapperInterceptor">-->
+<!--            &lt;!&ndash; 通用 mapper 接口，多个通用接口用逗号隔开 &ndash;&gt;-->
+<!--            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>-->
+<!--        </plugin>-->
     </plugins>
     <environments default="test">
         <environment id="test">

@@ -45,6 +45,17 @@ public class EmpDaoTest {
         System.out.println(empPO);
     }
 
+
+    @Test
+    public void selectAll() throws IOException {
+        SqlSessionFactory sqlSessionFactory = getSqlSessionFactory();
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        EmpDao empDao = sqlSession.getMapper(EmpDao.class);
+        List<EmpPO> empPOList = empDao.selectAll();
+        for (EmpPO empPO : empPOList) {
+            System.out.println(empPO);
+        }
+    }
     @Test
     public void testPageHelper() throws IOException {
         SqlSessionFactory sqlSessionFactory = getSqlSessionFactory();
